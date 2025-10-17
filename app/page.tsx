@@ -31,13 +31,10 @@ const [currentChain, setCurrentChain] = useState<any>(null);
   const {
     greeting,
     refetchGreeting,
-    readError,
     setGreeting,
     isWritePending,
-    writeError,
     isConfirming,
     isConfirmed,
-    confirmError,
     transactionHash,
   } = useGreeter(); // Make sure your hook returns `hash`
 
@@ -194,10 +191,7 @@ const [currentChain, setCurrentChain] = useState<any>(null);
                     </div>
                   )}
                 </div>
-                {readError && <p className={styles.errorMessage}>Error reading greeting: {readError.message}</p>}
-{writeError && <p className={styles.errorMessage}>Error writing greeting: {writeError.message}</p>}
-{confirmError && <p className={styles.errorMessage}>Error confirming transaction: {confirmError.message}</p>}
-
+                
               </>
             )}
           </div>
