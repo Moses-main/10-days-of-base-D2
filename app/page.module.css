@@ -1,0 +1,169 @@
+.container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+.spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.headerWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1.5rem;
+}
+
+.title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #00c896, #00ffe0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.07);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.cardTitle {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding-bottom: 0.5rem;
+  font-weight: 700;
+  color: #f0f0f0;
+}
+
+.label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  color: #b3e5fc;
+}
+
+.address,
+.balance,
+.signature {
+  font-family: 'Courier New', monospace;
+  word-break: break-word;
+  background-color: rgba(0, 0, 0, 0.25);
+  padding: 0.75rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.input {
+  padding: 0.8rem 1.1rem;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.input::placeholder {
+  color: #cccccc;
+}
+
+.input:focus {
+  border: 1px solid #00ffe0;
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.button {
+  background: linear-gradient(135deg, #00c896, #00ffe0);
+  color: #111;
+  font-weight: 600;
+  border: none;
+  padding: 0.8rem 1.6rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.button:hover {
+  background: linear-gradient(135deg, #00ffe0, #00c896);
+  box-shadow: 0 4px 15px rgba(0, 255, 224, 0.3);
+}
+
+.errorMessage {
+  background-color: rgba(255, 77, 79, 0.9);
+  color: #fff;
+  padding: 1.2rem;
+  border-radius: 10px;
+  text-align: center;
+  border-left: 5px solid #ff4d4f;
+  font-weight: 500;
+}
+
+.networkInfo {
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+  opacity: 0.85;
+}
+
+.signatureBox {
+  margin-top: 1rem;
+}
+
+.infoText {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #00ffe0;
+  padding: 1.2rem 1.5rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+  color: #e0f7fa;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
