@@ -20,9 +20,10 @@ export default function Home() {
   const [message, setMessage] = useState("");
   const [balance, setBalance] = useState<string | null>(null);
   const [signature, setSignature] = useState<string | null>(null);
-  import type { Chain } from "wagmi";
+  
 
-const [currentChain, setCurrentChain] = useState<Chain | null>(null);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+const [currentChain, setCurrentChain] = useState<any>(null);
 
 
   const isCorrectNetwork = currentChain?.id === baseSepolia.id;
